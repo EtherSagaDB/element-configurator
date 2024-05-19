@@ -25,6 +25,9 @@ namespace element_configurator
     {
         public MainWindow()
         {
+            // Set an icon using code
+            Uri iconUri = new Uri("pack://application:,,,/resource/icon.ico", UriKind.RelativeOrAbsolute);
+            this.Icon = BitmapFrame.Create(iconUri);
             InitializeComponent();
             TextBox[] content = {
                 txtCommonChatColor,

@@ -8,9 +8,21 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Assets\**" />
+    <EmbeddedResource Remove="Assets\**" />
+    <None Remove="Assets\**" />
+    <Page Remove="Assets\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="resource\icon.ico" />
+  </ItemGroup>
+
 	<ItemGroup>
-		<Folder Include="Assets\"/>
-		<Resource Include="Assets/logo.ico" />
+		<Resource Include="resource\icon.ico">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Resource>
 	</ItemGroup>
 
 </Project>
